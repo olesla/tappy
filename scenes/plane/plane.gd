@@ -4,7 +4,7 @@ extends CharacterBody2D
 @onready var animation_player = $AnimationPlayer
 
 const GRAVITY: float = 1500.0
-const POWER: float = -500.0
+const POWER: float = -200.0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
