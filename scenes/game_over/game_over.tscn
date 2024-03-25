@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://s2j2aha7fus4"]
+[gd_scene load_steps=5 format=3 uid="uid://s2j2aha7fus4"]
 
 [ext_resource type="FontFile" uid="uid://ia4venemuy5s" path="res://assets/fonts/LuckiestGuy-Regular.ttf" id="1_babks"]
 [ext_resource type="Script" path="res://scenes/game_over/game_over.gd" id="1_mxeyq"]
+[ext_resource type="AudioStream" uid="uid://cc5guxbv2vc70" path="res://assets/audio/game_over.wav" id="3_36s40"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_5pkxu"]
 font = ExtResource("1_babks")
@@ -55,5 +56,8 @@ label_settings = SubResource("LabelSettings_5pkxu")
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
+
+[node name="GameOverSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_36s40")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

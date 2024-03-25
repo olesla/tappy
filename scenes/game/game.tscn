@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://jqc31dc1asvj"]
+[gd_scene load_steps=9 format=3 uid="uid://jqc31dc1asvj"]
 
 [ext_resource type="Texture2D" uid="uid://cvd81ni3xmptq" path="res://assets/background/rocks_2.png" id="1_ms0a8"]
 [ext_resource type="Script" path="res://scenes/game/game.gd" id="1_w2wy7"]
 [ext_resource type="PackedScene" uid="uid://00myub2oucyr" path="res://scenes/plane/plane.tscn" id="2_pyhpo"]
+[ext_resource type="PackedScene" uid="uid://dvvqjs8yk8rho" path="res://scenes/parallax_background/parallax_background.tscn" id="3_24qkf"]
 [ext_resource type="PackedScene" uid="uid://cpcm3av1sw1nl" path="res://scenes/barrier/barrier.tscn" id="3_su7qy"]
 [ext_resource type="PackedScene" uid="uid://c1p7o4ftx5raw" path="res://scenes/pipes/pipes.tscn" id="4_6f574"]
 [ext_resource type="PackedScene" uid="uid://n1m5kjlgoftd" path="res://scenes/hud/hud.tscn" id="6_dtw7e"]
@@ -12,7 +13,10 @@
 script = ExtResource("1_w2wy7")
 pipes_scene = ExtResource("4_6f574")
 
+[node name="ParallaxBackground" parent="." instance=ExtResource("3_24qkf")]
+
 [node name="Rocks2" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(156, 313)
 texture = ExtResource("1_ms0a8")
 

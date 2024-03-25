@@ -12,10 +12,6 @@ func _ready():
 	SignalManager.on_plane_died.connect(_on_plane_died)
 	spawn_pipes()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
 func spawn_pipes() -> void:
 	var new_pipes = pipes_scene.instantiate()
 	var y_pos = randf_range(spawn_upper.position.y, spawn_lower.position.y)
